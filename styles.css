@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 body {
   background: #fff;
   margin: 0;
@@ -8,7 +9,7 @@ body {
 
 body * {
   color: #292A2C;
-  font-family: "IBM Plex Sans", "sans-serif";
+  font-family: "Mulish", "sans-serif";
   line-height: 1.5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -405,7 +406,7 @@ h1, h3, p, img {
 }
 
 .project-details .project-overview .project-title div {
-  font-family: "IBM Plex Sans", "sans-serif";
+  font-family: "Mulish", "sans-serif";
   font-size: 16px;
   opacity: 0.7;
   margin-top: 2px;
@@ -452,7 +453,7 @@ h1, h3, p, img {
 }
 
 .project-details .project-stats .stat .stat-value {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .project-details .project-stats .stat .stat-value span.points {
@@ -485,8 +486,15 @@ h1, h3, p, img {
   border-radius: 4px;
 }
 
+.ayn-project-body .content-divider {
+  margin: 72px auto;
+  height: 1px;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.08);
+}
+
 .ayn-project-body .content-width {
-  font-size: 21px;
+  font-size: 18px;
   margin-bottom: 62px;
   /* lightslider */
 }
@@ -501,8 +509,13 @@ h1, h3, p, img {
   margin: 0 auto;
 }
 
-.ayn-project-body .content-width .white-highlight {
-  font-weight: 600;
+.ayn-project-body .content-width .make-bold {
+  font-weight: 700;
+}
+
+.ayn-project-body .content-width .make-italic {
+  font-weight: 500;
+  font-style: italic;
 }
 
 .ayn-project-body .content-width p {
@@ -854,7 +867,7 @@ body.project--webdev .project-details {
   }
   .ayn-project-body .project-stats .stat .stat-value {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
   }
   .ayn-project-body .project-stats .stat .stat-value span.points {
     margin-bottom: 8px;

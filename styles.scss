@@ -1,11 +1,12 @@
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 // variables
 $color-black: #292A2C;
 $font-primary: 'Red Rose', 'serif';
-$font-secondary: 'IBM Plex Sans', 'sans-serif';
+$font-secondary: 'Mulish', 'sans-serif';
 
 
 body{
@@ -367,7 +368,7 @@ h1, h3, p, img{
                 margin-bottom: 2px;
             }
             .stat-value{
-                font-weight: 600;
+                font-weight: 700;
                 span.points{
                     margin-bottom: 8px;
                     &:last-child{
@@ -399,8 +400,16 @@ h1, h3, p, img{
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12)
     }
+    .content-divider{
+        // padding: 42px 0;
+        margin: 72px auto;
+        // background: url("Images/squiggle.svg") center no-repeat;
+        height: 1px;
+        width: 40%;
+        background: rgba(0,0,0, .08)
+    }
     .content-width{
-        font-size: 21px;
+        font-size: 18px;
         margin-bottom: 62px;
         &>*:last-child{
             margin-bottom: 0;
@@ -410,8 +419,12 @@ h1, h3, p, img{
             max-width: 720px;
             margin: 0 auto;
         }
-        .white-highlight{
-            font-weight: 600;
+        .make-bold{
+            font-weight: 700;
+        }
+        .make-italic{
+            font-weight: 500;
+            font-style: italic;
         }
         p{
             margin-bottom: 20px !important;
@@ -709,7 +722,7 @@ body.project--webdev{
                 }
                 .stat-value{
                     font-size: 16px;
-                    font-weight: 600;
+                    font-weight: 700;
                     span.points{
                         margin-bottom: 8px;
                         &:last-child{
