@@ -49,7 +49,7 @@ $('document').ready(function () {
     $(".project-details .fixed-content-wrapper").css("transform", "translateY(-" + scrollTop / 5 + "px)");
   });
 
-  // // REMOVE THIS
-  // $(".ayn-project-body p").attr("contenteditable", "true");
+  // REMOVE THIS
+  $(".ayn-project-body p").attr("contenteditable", "true");
 
 });
