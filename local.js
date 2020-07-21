@@ -1,9 +1,9 @@
 
 
-$('document').ready(function() {
+$('document').ready(function () {
   window.onload = function () {
-    setTimeout(function(){
-      $(".pre-loader").fadeOut(600, function(){ $(".pre-loader").remove(); } ); 
+    setTimeout(function () {
+      $(".pre-loader").fadeOut(600, function () { $(".pre-loader").remove(); });
     }, 750)
   }
 
@@ -26,23 +26,29 @@ $('document').ready(function() {
 
 
   //lightslider
-  if($("ul.lightSlider").length>0){
-  $("ul.lightSlider").lightSlider({
-    item: 1,
-    loop: true,
-    gallery: true,
-    controls: false,
-    thumbMargin: 15,
-    enableDrag:false,
-  })
-}
-  
+  if ($("ul.lightSlider").length > 0) {
+    $("ul.lightSlider").lightSlider({
+      item: 1,
+      loop: true,
+      gallery: true,
+      controls: false,
+      thumbMargin: 15,
+      enableDrag: false,
+    })
+  }
+
+  //is-tooltip
+  if ($(".has-tooltip").length > 0) {
+    var tooltipValue = $(".has-tooltip").attr("data-value");
+    $(".has-tooltip").append("<div class='is-tooltip'>"+tooltipValue+"</div>");
+  }
+
   //project scroll animation
-  $(window).scroll(function(){
+  $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     $(".project-details").css("opacity", 1 - scrollTop / 500);
     // console.log($(".project-details .project-overview"));
-    $(".project-details .fixed-content-wrapper").css("transform", "translateY(-"+ scrollTop/5 +"px)");
+    $(".project-details .fixed-content-wrapper").css("transform", "translateY(-" + scrollTop / 5 + "px)");
   });
 
 

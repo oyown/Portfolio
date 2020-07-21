@@ -90,6 +90,42 @@ h1, h3, p, img{
     }
 }
 
+.has-tooltip{
+    position: relative;
+    .is-tooltip{
+        opacity: 0;
+        cursor: default;
+        background: #292A2C;
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.072);
+        padding: 12px;
+        font-size: 14px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 16%);
+        width: 100%;
+        z-index: 4;
+        transition: opacity .2s ease;
+        &:after{
+            content:"";
+            position: absolute;
+            top: 7px;
+            left: 45%;
+            transform: rotate(45deg) translate(-50%, -50%);
+            border-radius: 3px;
+            background: #292A2C;
+            height: 18px;
+            width: 18px;
+        }
+    }
+    &:hover{
+        .is-tooltip{
+            opacity: 1 !important;
+        }
+    }
+}
+
 // home page
 .panels{
     width: 100%;
@@ -524,6 +560,13 @@ body.project--webdev{
             position: fixed;
         }
     }
+    
+    .has-tooltip{
+        .is-tooltip{
+            text-align: left;
+            min-width: calc(100% + 20px);
+        }
+    }
 
     //homepage
     .panels{
@@ -542,7 +585,7 @@ body.project--webdev{
                 .subheader{
                     font-size: 18px;
                     line-height: 1.7;
-                    opacity: .7;    
+                    color: rgba(41, 42, 44, .7);
                 }
                 .list--industry{
                     flex-wrap: wrap;
