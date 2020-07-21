@@ -204,6 +204,9 @@ h1, h3, p, img {
   overflow: hidden;
   margin-bottom: 20px;
   border-radius: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .panels .right-panel .list--project .project-thumb img {
@@ -537,6 +540,30 @@ h1, h3, p, img {
   background: #38E1CC;
   left: 0;
   top: 0;
+}
+
+.ayn-project-body .content-width .project-desc {
+  background: #292A2C;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 42px !important;
+}
+
+.ayn-project-body .content-width .project-desc h1.title {
+  color: #fff;
+  font-family: "Red Rose", "serif";
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.ayn-project-body .content-width .project-desc p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+.ayn-project-body .content-width .project-desc p.objective {
+  font-weight: 600;
+  margin-bottom: 0 !important;
 }
 
 .ayn-project-body .content-width .content-image {
