@@ -232,7 +232,7 @@ h1, h3, p, img {
 }
 
 .panels .right-panel .social-links {
-  margin: 60px 0;
+  margin: 24px 0 16px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,8 +744,10 @@ body.project--webdev .project-details {
     margin-right: 0;
   }
   .panels .right-panel .list--project .project-thumb {
-    width: 100%;
+    width: calc(100vw - 32px);
     height: 502px;
+    background-size: cover;
+    background-position: top;
   }
   .panels .right-panel .list--project .project-thumb img {
     width: 100%;
