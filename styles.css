@@ -532,6 +532,15 @@ h1, h3, p, img {
   margin-bottom: 12px !important;
 }
 
+.ayn-project-body .content-width h4 {
+  font-size: 20px;
+  font-family: "Mulish", "sans-serif";
+  font-weight: 700;
+  margin-bottom: 12px !important;
+  border-left: 4px solid #38E1CC;
+  padding-left: 12px;
+}
+
 .ayn-project-body .content-width ul {
   margin-bottom: 20px !important;
 }
@@ -624,6 +633,10 @@ h1, h3, p, img {
   font-family: "Red Rose", "serif";
   width: 100%;
   text-align: center;
+}
+
+.ayn-project-body .content-width .lSSlideOuter {
+  margin-bottom: 32px;
 }
 
 .ayn-project-body .content-width .lightslider .content-image, .ayn-project-body .content-width ul {

@@ -440,6 +440,15 @@ h1, h3, p, img{
             margin-bottom: 12px !important;
         }
 
+        h4{
+            font-size: 20px;
+            font-family: $font-secondary;
+            font-weight: 700;
+            margin-bottom: 12px !important;
+            border-left: 4px solid #38E1CC;
+            padding-left: 12px;
+        }
+
         ul{
             margin-bottom: 20px !important;
         }
@@ -460,7 +469,7 @@ h1, h3, p, img{
                 top: 0;
             }
         }
-
+        
         .project-desc{
             background: #292A2C;
             padding: 24px;
@@ -517,6 +526,10 @@ h1, h3, p, img{
         }
 
         /* lightslider */
+
+        .lSSlideOuter {
+            margin-bottom: 32px;
+        }
 
         .lightslider .content-image, ul{
             margin: 0 auto;
