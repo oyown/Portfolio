@@ -583,6 +583,7 @@ h1, h3, p, img {
 }
 
 .ayn-project-body .content-width .project-desc p.objective {
+  color: #fff;
   font-weight: 600;
   margin-bottom: 0 !important;
 }

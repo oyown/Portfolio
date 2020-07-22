@@ -96,7 +96,7 @@
     </div>
     <div class="ayn-project-body">
       <div class="banner-image">
-        <img loading="lazy" src="../Works/Images/Webdev/First Look.jpg" alt="">
+        <img loading="lazy" src="../Works/Images/Alvo/Game Home.png" alt="">
       </div>
       <section class="content-width intro">
         <div class="project-stats d-flex mobile-only">
@@ -147,60 +147,69 @@
             </div>
           </div>
         </div>
+        <div class="project-desc">
+          <h1>Project Overview</h1>
+          <p>Alvo is a FPS (First Person Shooter) VR game in Battle Royale mode - a group of players fight to the end, last survivor wins.</p>
+          <p class="objective">The goal was to push the edge of what's possible in VR, and make Alvo stand out among the sea of competition.</p>
+        </div>
         <p>
-          Alvo required an interface that worked seamlessly in VR and appealed to the already massive user base of first
-          person shooters. An identity was built comprising of familiar elements from the web & traditional games while
-          still taking advantage of the infinite expanse of VR.
+          In fall of 2019, I was approached by the CEO of Mardonpol Inc. - a 2x client of mine - to design interface for a VR game.
+        </p>
+        <p style="font-weight: bold;">
+          In this case study, I'll walk you through how I morphed exisiting design principles to suit a medium I had never designed for before.
         </p>
       </section>
 
       <div class="content-divider"></div>
-
-      <!-- <section class="content-width">
-        <p>I agreed, but only if I could take over the entire end-to-end design process - basically I’d be responsible
-          for 17webdev’s entire design, <span class="white-highlight">from ideation to implementation to handoff.</span>
-          Without being in charge of everything, it would have been impossible to deliver something within a month.</p>
-        <p>James - to his credit - understood and agreed, and soon enough the rebrand was underway.</p>
-        <p>In this case study, instead of just dumping everything that I built I want to talk more about the process and
-          the decisions that led me to ship within a month, and then keep things going on even as Covid-19 hit hard.</p>
-      </section> -->
-
       <section class="content-width">
-        <h3>Limited by skillset, not by bezels - Research section</h3>
-        <p>With it's first game in VR, Alvo was looking to enter a market still not dominated by the big names. Present
-          games in VR consisted of mosty battle-royale style gameplay with graphics that looked like it was out of the
-          90s. While VR is a challenging area to work for, Alvo still wanted to push the edge and give a present day
-          game feel in your head.</p>
+        <h3>Reality Check</h3>
+        <p>The first step was to research what users are already familiar with and expect a VR game to be. <span class="make-italic">(Jacob's Law)</span></p>
+        <p>Unsurprisingly, VR Field of View (FOV) <span class="make-bold">mimicks real life</span> - player focus remains at the center of the FOV
+          thus allowing anything to be placed within that area.</p>
         <div class="content-image">
-          <img loading="lazy" src="../Works/Images/Webdev/Figma Trials.jpg" alt="">
-          <span class="caption">New Territory</caption>
+          <img loading="lazy" src="../Works/Images/Alvo/Degree.png" alt="">
+          <span class="caption">Real vs. reality</caption>
         </div>
-        <p>To take full advantage of the wider field of view in VR, it was important to have an idea where on the plane
-          it was easiest for the player to interact.</p>
-        <p>It also came into light that even though players have the freedom to turn anywhere they want to, they almost
-          always will be going facing forward instead of backward.</p>
+        <p>To take full advantage of the wider field of view in VR, it was important to have an idea where on the plane it was easiest for the player to interact.</p>
+        <p class="make-bold">It comes with a catch, though - place elements too near and it will cause nausea, place them too far and it'd be <span class="make-italic">difficult to see.</span></p>
         <div class="content-image">
-          <img loading="lazy" src="../Works/Images/Webdev/Figma Trials.jpg" alt="">
-          <span class="caption">That turns heads.</caption>
+          <img loading="lazy" src="../Works/Images/Alvo/Comfortable Area.png" alt="">
+          <span class="caption">Prompts to encourage exploration</caption>
         </div>
-        <p>Unsurprisingly, VR field of view mimicks real life - player focus remains at the center of the field of view
-          thus allowing anything to be placed within a comfortable viewing area.</p>
+        <p>I explored the idea of <span class="make-bold">prompting users to turn their heads</span> by placing signs and overlapping elements in the Field of View.</p>
+        <p>It turned out to be a good find, and would be used later in the game.</p>
       </section>
 
       <section class="content-width">
         <h3>Overall Interface</h3>
         <p>The interface was kept minimal down to the very core, only attracting the attention of the player when
           necessary and taking care to stay out of the way of the gameplay experience.</p>
-        <div class="content-image">
-          <img loading="lazy" src="../Works/Images/Webdev/Filler.jpg" alt="">
-          <span class="caption">[ insert card images on the right / weapon carousel so it links to info box? ]</caption>
-        </div>
+        <ul class="lightslider">
+          <li class="slide-item" data-thumb="../Works/Images/Alvo/Leaderboard.png">
+            <div class="content-image">
+              <img loading="lazy" src="../Works/Images/Alvo/Leaderboard.png" alt="">
+              <span class="caption">The "highlighter" effect was very popular, </caption>
+            </div>
+          </li>
+          <li class="slide-item" data-thumb="../Works/Images/Alvo/Result.png">
+            <div class="content-image">
+              <img loading="lazy" src="../Works/Images/Alvo/Result.png" alt="">
+              <span class="caption">but subtle made more sense.</caption>
+            </div>
+          </li>
+          <li class="slide-item" data-thumb="../Works/Images/Alvo/Choose Map.png" >
+            <div class="content-image">
+              <img loading="lazy" src="../Works/Images/Alvo/Choose Map.png" alt="">
+              <span class="caption">but subtle made more sense.</caption>
+            </div>
+          </li>
+        </ul>
         <p>However, considering that many players would be newcomers to the genre, several tips were used to guide them
           throughout.</p>
-        <div class="content-image">
-          <img loading="lazy" src="../Works/Images/Webdev/Filler.jpg" alt="">
-          <span class="caption">[insert info box image]</caption>
-        </div>
+          <div class="content-image">
+            <img loading="lazy" src="../Works/Images/Alvo/Select Game Mode.png" alt="">
+            <span class="caption">[ insert card images on the right / weapon carousel so it links to info box? ]</caption>
+          </div>
 
         <h4>Turning heads, literally.</h4>
         <p>Taking advantage of VR over static screens was crucial to the gameplay experience - hence, players are
