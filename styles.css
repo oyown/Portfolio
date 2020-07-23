@@ -1037,6 +1037,9 @@ body.project--alvo .ayn-project-body .content-width h4 {
   .ayn-project-body .content-width .content-image img {
     max-width: 100%;
   }
+  .ayn-project-body .content-width .content-image .is-scrolling-vr {
+    height: 34vw;
+  }
   .iframe-container {
     position: relative;
     width: 100%;
