@@ -73,6 +73,6 @@ $('document').ready(function () {
   }
 
   // REMOVE THIS
-  $(".ayn-project-body p").attr("contenteditable", "true");
+  // $(".ayn-project-body p").attr("contenteditable", "true");
 
 });
