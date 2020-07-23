@@ -531,12 +531,14 @@ h1, h3, p, img {
 
 .ayn-project-body .content-width a {
   font-style: italic;
+  text-decoration: none;
   font-family: "Red Rose", "serif";
+  border-bottom: 2px solid #e4a030;
 }
 
 .ayn-project-body .content-width h1, .ayn-project-body .content-width h3 {
   font-size: 32px;
-  color: #38E1CC;
+  color: #e4a030;
   margin-bottom: 12px !important;
 }
 
@@ -545,7 +547,7 @@ h1, h3, p, img {
   font-family: "Mulish", "sans-serif";
   font-weight: 700;
   margin-bottom: 12px !important;
-  border-left: 4px solid #38E1CC;
+  border-left: 4px solid #e4a030;
   padding-left: 12px;
 }
 
@@ -566,13 +568,13 @@ h1, h3, p, img {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #38E1CC;
+  background: #e4a030;
   left: 0;
   top: 0;
 }
 
 .ayn-project-body .content-width .project-desc {
-  background: #292A2C;
+  background: #fdf7ed;
   padding: 24px;
   border-radius: 12px;
   margin-bottom: 42px !important;
@@ -586,13 +588,14 @@ h1, h3, p, img {
 }
 
 .ayn-project-body .content-width .project-desc p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #292A2C;
   font-size: 18px;
 }
 
 .ayn-project-body .content-width .project-desc p.objective {
-  color: #fff;
-  font-weight: 600;
+  color: #292A2C;
+  font-weight: 700;
+  opacity: 1;
   margin-bottom: 0 !important;
 }
 
@@ -752,6 +755,34 @@ h1, h3, p, img {
 body.project--webdev .project-details {
   background: #c4c0fd;
   padding: 20vh 0;
+}
+
+body.project--webdev .ayn-project-body .content-width .project-desc {
+  background: #c4c0fd47;
+}
+
+body.project--webdev .ayn-project-body .content-width h1, body.project--webdev .ayn-project-body .content-width h3 {
+  color: #776fef;
+}
+
+body.project--webdev .ayn-project-body .content-width h4 {
+  border-color: #776fef;
+}
+
+body.project--alvo .project-details {
+  background: #FCE2E1;
+}
+
+body.project--alvo .ayn-project-body .content-width .project-desc {
+  background: #fce2e16b;
+}
+
+body.project--alvo .ayn-project-body .content-width h1, body.project--alvo .ayn-project-body .content-width h3 {
+  color: #ff6d67;
+}
+
+body.project--alvo .ayn-project-body .content-width h4 {
+  border-color: #ff6d67;
 }
 
 @-webkit-keyframes vr-scroll {
