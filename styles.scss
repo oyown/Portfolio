@@ -333,7 +333,7 @@ h1, h3, p, img{
         max-width: 50%;
         margin-right: 32px;
         .project-title{
-            font-size: calc(32px + (62 - 32) * ((100vw - 325px) / (1440 - 325)));
+            font-size: calc(28px + (62 - 28) * ((100vw - 325px) / (1440 - 325)));
             font-family: $font-primary;
             // margin-bottom: 28px;
             div{
@@ -879,4 +879,11 @@ body.project--alvo{
         }
     }
       
+}
+
+//mobile styles
+@media screen and (max-width: 768px){
+    .ayn-project-body{
+        padding-top: 186px;
+    }
 }

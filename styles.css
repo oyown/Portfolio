@@ -409,7 +409,7 @@ h1, h3, p, img {
 }
 
 .project-details .project-overview .project-title {
-  font-size: calc(32px + (62 - 32) * ((100vw - 325px) / (1440 - 325)));
+  font-size: calc(28px + (62 - 28) * ((100vw - 325px) / (1440 - 325)));
   font-family: "Red Rose", "serif";
 }
 
@@ -1054,6 +1054,12 @@ body.project--alvo .ayn-project-body .content-width h4 {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ayn-project-body {
+    padding-top: 186px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
