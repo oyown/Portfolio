@@ -142,7 +142,7 @@ h1, h3, p, img{
             }
             .title--page{
                 font-family: $font-primary;
-                font-size: 62px;
+                font-size: calc(42px + (62 - 42) * ((100vw - 325px) / (1440 - 325)));
                 margin-bottom: 8px;
             }
             .subheader{
@@ -333,7 +333,7 @@ h1, h3, p, img{
         max-width: 50%;
         margin-right: 32px;
         .project-title{
-            font-size: 52px;
+            font-size: calc(32px + (62 - 32) * ((100vw - 325px) / (1440 - 325)));
             font-family: $font-primary;
             // margin-bottom: 28px;
             div{

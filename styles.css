@@ -168,7 +168,7 @@ h1, h3, p, img {
 
 .panels .left-panel .header-text .title--page {
   font-family: "Red Rose", "serif";
-  font-size: 62px;
+  font-size: calc(42px + (62 - 42) * ((100vw - 325px) / (1440 - 325)));
   margin-bottom: 8px;
 }
 
@@ -409,7 +409,7 @@ h1, h3, p, img {
 }
 
 .project-details .project-overview .project-title {
-  font-size: 52px;
+  font-size: calc(32px + (62 - 32) * ((100vw - 325px) / (1440 - 325)));
   font-family: "Red Rose", "serif";
 }
 
