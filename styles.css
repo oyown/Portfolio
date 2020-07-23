@@ -1042,6 +1042,8 @@ body.project--alvo .ayn-project-body .content-width h4 {
     width: 100%;
     padding-bottom: 56.25%;
     height: 0;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.08);
   }
   .iframe-container iframe {
     position: absolute;

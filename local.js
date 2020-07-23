@@ -3,8 +3,26 @@ $('document').ready(function () {
     setTimeout(function () {
       $(".pre-loader").fadeOut(600, function () { $(".pre-loader").remove(); });
     }, 750)
+    
+    if($('.iframe-container').length>0){
+      setTimeout(function () {
+        $(".iframe-container").append("<iframe src='https://www.youtube.com/embed/6DyXzrEpFdE?modestbranding=1&showinfo=0&rel=0&color=white'width='720' height='405' frameborder='0'></iframe>");
+      }, 600)
+    }
   }
 
+  //youtube video
+  var iframeDiv = "<iframe src='https://www.youtube.com/embed/6DyXzrEpFdE?modestbranding=1&showinfo=0&rel=0&color=white'width='720' height='405' frameborder='0'></iframe>";
+
+  //scrolled into view MIGHT NEED LATER
+  // $(window).scroll(function(){
+  //   var scrollTop     = $(window).scrollTop(),
+  //   elementOffset = $('.iframe-container').offset().top,
+  //   distance      = (elementOffset - scrollTop);
+  //   if(distance <= 2000){
+  //     $(".iframe-container").append(iframeDiv);
+  //   }
+  // });
 
   // read url
   var getUrlParameter = function getUrlParameter(sParam) {

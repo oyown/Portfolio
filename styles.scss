@@ -865,13 +865,15 @@ body.project--alvo{
         width: 100%;
         padding-bottom: 56.25%; 
         height: 0;
+        height: 300px;
+        background: rgba(0,0,0, .08);
+        iframe{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
       
-    .iframe-container iframe{
-        position: absolute;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
 }
