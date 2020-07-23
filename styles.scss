@@ -177,11 +177,13 @@ h1, h3, p, img{
                 overflow: hidden;
                 margin-bottom: 20px;
                 border-radius: 12px;
+                left: 0;
 
                 //background image
-                background-size: contain;
+                background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: center;
+                transition: all .3s ease;
                 img{
                     height: 100%;
                     width: 100%;
@@ -199,6 +201,8 @@ h1, h3, p, img{
                     z-index: 2;
                 }
                 &:hover{
+                    left: 12px;
+                    background-size: 101%;
                     img{
                         transform: scale(1.01);
                     }

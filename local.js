@@ -50,7 +50,9 @@ $('document').ready(function () {
   });
 
   //scrolling fade in
+  if ($(".ayn-project-body").length > 0) {
   ScrollReveal().reveal('.ayn-project-body section>*', { delay: 200 });
+  }
 
   // REMOVE THIS
   $(".ayn-project-body p").attr("contenteditable", "true");

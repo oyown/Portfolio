@@ -205,9 +205,12 @@ h1, h3, p, img {
   overflow: hidden;
   margin-bottom: 20px;
   border-radius: 12px;
-  background-size: contain;
+  left: 0;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .panels .right-panel .list--project .project-thumb img {
@@ -225,6 +228,11 @@ h1, h3, p, img {
   height: 100%;
   width: 100%;
   z-index: 2;
+}
+
+.panels .right-panel .list--project .project-thumb:hover {
+  left: 12px;
+  background-size: 101%;
 }
 
 .panels .right-panel .list--project .project-thumb:hover img {
