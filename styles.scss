@@ -142,7 +142,7 @@ h1, h3, p, img{
             }
             .title--page{
                 font-family: $font-primary;
-                font-size: calc(42px + (62 - 42) * ((100vw - 325px) / (1440 - 325)));
+                font-size: 62px;
                 margin-bottom: 8px;
             }
             .subheader{
@@ -333,7 +333,7 @@ h1, h3, p, img{
         max-width: 50%;
         margin-right: 32px;
         .project-title{
-            font-size: calc(28px + (62 - 28) * ((100vw - 325px) / (1440 - 325)));
+            font-size: 62px;
             font-family: $font-primary;
             // margin-bottom: 28px;
             div{
@@ -789,6 +789,7 @@ body.project--alvo{
 
     //project pages
     .project-details{
+        padding: 20vh 0;
         .fixed-content-wrapper{
             flex-direction: column;
             align-items: flex-start;
@@ -797,6 +798,7 @@ body.project--alvo{
             }
             .project-overview{
                 .project-title{
+                    font-size: 52px;
                     line-height: 1;
                     div{
                         margin-top: 20px;
@@ -883,7 +885,19 @@ body.project--alvo{
 
 //mobile styles
 @media screen and (max-width: 768px){
+    .project-details{
+        padding: 18vh 0;
+        .fixed-content-wrapper{
+            padding: 0 20px;
+            .project-overview{
+                margin-right: 0;
+                .project-title{
+                    font-size: 32px;
+                }
+            }
+        }
+    }
     .ayn-project-body{
-        padding-top: 186px;
+        padding-top: 160px;
     }
 }
