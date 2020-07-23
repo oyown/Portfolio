@@ -524,6 +524,48 @@ h1, h3, p, img{
                 width: 100%;
                 text-align: center;
             }
+
+            .is-scrolling-vr{
+                position: relative;
+                overflow: hidden;
+                width: 992px;
+                height: 362px;
+                transition: all 0.9s ease-in-out;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.single-scroll{
+                    background-position: top left;
+                    background-size: 130%;
+                    &:hover, &:active{
+                        background-position: top right;
+                    }
+                    .top{
+                        max-width: 96%;
+                        position: relative;
+                        bottom: -8px;
+                    }
+                }
+                &.both-scroll{
+                    background-position: center;
+                    background-size: 200%;
+                    animation: vr-scroll 16s infinite linear;
+                    .left-hover, .right-hover{
+                        position: absolute;
+                        height: 100%;
+                        width: 50%;
+                        top:0;
+                        left: 0;
+                        // background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+                    }
+                    .right-hover{
+                        left: auto;
+                        right: 0;
+                        // background-image: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+                    }
+                }
+            }
         }
 
         /* lightslider */
@@ -583,7 +625,24 @@ body.project--webdev{
    } 
 }
 
-
+//keyframes
+@keyframes vr-scroll{
+    0%{
+        background-position: center;;
+    }
+    25%{
+        background-position: left;
+    }
+    50%{
+        background-position: center;
+    }
+    75%{
+        background-position: right;
+    }
+    100%{
+        background-position: center;
+    }
+}
 
 //MOBILE STYLES
 @media screen and (max-width: 1200px){

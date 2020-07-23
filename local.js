@@ -49,6 +49,19 @@ $('document').ready(function () {
     $(".project-details .fixed-content-wrapper").css("transform", "translateY(-" + scrollTop / 5 + "px)");
   });
 
+  //scrolling vr
+  // if ($(".is-scrolling-vr").length > 0) {
+  //   $(".is-scrolling-vr.both-scroll .left-hover, .is-scrolling-vr.both-scroll .right-hover").hover(function(item){
+  //     var hoverTarget = $(item);
+  //     if(hoverTarget.hasClass("left-hover")){
+  //       $(".is-scrolling-vr.both-scroll").removeClass("scroll-right").addClass("scroll-left");
+  //     }
+  //     else if(hoverTarget.hasClass("right-hover")){
+  //       $(".is-scrolling-vr.both-scroll").removeClass("scroll-left").addClass("scroll-right");
+  //     }
+  //   })
+  // }
+
   // REMOVE THIS
   $(".ayn-project-body p").attr("contenteditable", "true");
 

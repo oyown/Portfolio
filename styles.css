@@ -636,6 +636,60 @@ h1, h3, p, img {
   text-align: center;
 }
 
+.ayn-project-body .content-width .content-image .is-scrolling-vr {
+  position: relative;
+  overflow: hidden;
+  width: 992px;
+  height: 362px;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ayn-project-body .content-width .content-image .is-scrolling-vr.single-scroll {
+  background-position: top left;
+  background-size: 130%;
+}
+
+.ayn-project-body .content-width .content-image .is-scrolling-vr.single-scroll:hover, .ayn-project-body .content-width .content-image .is-scrolling-vr.single-scroll:active {
+  background-position: top right;
+}
+
+.ayn-project-body .content-width .content-image .is-scrolling-vr.single-scroll .top {
+  max-width: 96%;
+  position: relative;
+  bottom: -8px;
+}
+
+.ayn-project-body .content-width .content-image .is-scrolling-vr.both-scroll {
+  background-position: center;
+  background-size: 200%;
+  -webkit-animation: vr-scroll 16s infinite linear;
+          animation: vr-scroll 16s infinite linear;
+}
+
+.ayn-project-body .content-width .content-image .is-scrolling-vr.both-scroll .left-hover, .ayn-project-body .content-width .content-image .is-scrolling-vr.both-scroll .right-hover {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+}
+
+.ayn-project-body .content-width .content-image .is-scrolling-vr.both-scroll .right-hover {
+  left: auto;
+  right: 0;
+}
+
 .ayn-project-body .content-width .lSSlideOuter {
   margin-bottom: 32px;
 }
@@ -690,6 +744,42 @@ h1, h3, p, img {
 body.project--webdev .project-details {
   background: #c4c0fd;
   padding: 20vh 0;
+}
+
+@-webkit-keyframes vr-scroll {
+  0% {
+    background-position: center;
+  }
+  25% {
+    background-position: left;
+  }
+  50% {
+    background-position: center;
+  }
+  75% {
+    background-position: right;
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+@keyframes vr-scroll {
+  0% {
+    background-position: center;
+  }
+  25% {
+    background-position: left;
+  }
+  50% {
+    background-position: center;
+  }
+  75% {
+    background-position: right;
+  }
+  100% {
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 1200px) {
