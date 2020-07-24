@@ -425,9 +425,6 @@ h1, h3, p, img {
 
 .more-projects .more-project-list {
   margin-top: 52px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .more-projects .more-project-list .more-project {
@@ -474,7 +471,7 @@ h1, h3, p, img {
 
 @media screen and (min-width: 1201px) {
   .more-projects .more-project-list .more-project {
-    margin-right: 24px;
+    margin-right: 92px;
   }
   .more-projects .more-project-list .more-project:hover .title:after {
     right: -58px;

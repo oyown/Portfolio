@@ -347,7 +347,6 @@ h1, h3, p, img{
     }
     .more-project-list{
         margin-top: 52px;
-        justify-content: space-between;
         .more-project{
             cursor: pointer;
             position: relative;
@@ -382,7 +381,7 @@ h1, h3, p, img{
                 height: 100%;
             }
             @media screen and (min-width: 1201px){
-                margin-right: 24px;
+                margin-right: 92px;
                 &:hover{        
                     .title:after{
                         right: -58px;
@@ -707,7 +706,7 @@ h1, h3, p, img{
             z-index: -1;
         }
     }
-    
+
     // template pages
     &.template-only{
         img{
