@@ -2,3 +2,4 @@ external/meta-wtf.js
 .vscode
 Works/Images/Seer/Resources
 *.map
+.DS_Store
