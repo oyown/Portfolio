@@ -1,8 +1,6 @@
 $('document').ready(function () {
   window.onload = function () {
-    setTimeout(function () {
-      $(".pre-loader").fadeOut(600, function () { $(".pre-loader").remove(); });
-    }, 750)
+    $(".pre-loader").fadeOut(600, function () { $(".pre-loader").remove(); });
     
     if($('.iframe-container').length>0){
       setTimeout(function () {
