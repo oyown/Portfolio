@@ -707,6 +707,18 @@ h1, h3, p, img{
             z-index: -1;
         }
     }
+    
+    // template pages
+    &.template-only{
+        img{
+            width: 100%;
+            height: auto;
+            display: none;
+            &.is-showing{
+                display: block;
+            }
+        }
+    }
 }
 
 // project-page webdev

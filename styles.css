@@ -857,6 +857,16 @@ h1, h3, p, img {
   z-index: -1;
 }
 
+.ayn-project-body.template-only img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.ayn-project-body.template-only img.is-showing {
+  display: block;
+}
+
 body.project--webdev .project-details {
   background: #c4c0fd;
   padding: 20vh 0;

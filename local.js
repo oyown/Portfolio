@@ -38,6 +38,12 @@ $('document').ready(function () {
     }
   };
 
+ //alter project template via url
+ if(getUrlParameter("type")){
+   var urlParam = getUrlParameter("type");
+   $(".ayn-project-body").find('img.'+urlParam).addClass("is-showing");
+ }
+
 
   //lightslider
   if ($("ul.lightSlider").length > 0) {
