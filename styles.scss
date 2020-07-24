@@ -134,8 +134,9 @@ h1, h3, p, img{
     align-items: flex-end;
     .left-panel{
         position: sticky;
-        bottom: 172px;
+        bottom: 140px;
         max-width: 46%;
+        margin-bottom: 32px;
         .header-text{
             img.emoji--hi{
                 height: 62px;
@@ -169,6 +170,8 @@ h1, h3, p, img{
     }
     .right-panel{
         margin-top: 42px;
+        background: #fff;
+        z-index: 2;
         .list--project{
             .project-thumb{
                 position: relative;
@@ -208,28 +211,6 @@ h1, h3, p, img{
                             transform: scale(1.01);
                         }
                     }
-                }
-            }
-        }
-        .social-links{
-            margin: 24px 0 16px 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            a{
-                color: $color-black;
-                font-weight: 600;
-                position: relative;
-                transform: translateY(0);
-                transition: all .3s ease;
-                will-change: transform;
-                &:hover{
-                    transform: translateY(-4px);
-                }
-                img{
-                    margin-left: 20px;
-                    height: 20px;
-                    width: 20px;
                 }
             }
         }
@@ -278,19 +259,55 @@ h1, h3, p, img{
 }
 
 .site-actions{
-    position: fixed;
-    bottom: 42px;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    padding: 28px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    .cta--sponge{
-        margin-right: 20px;
-    }
-    .current-state{
-        font-weight: 600;
-        opacity: 0.7;
+    .action-panels{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .left-panel{
+            justify-content: center;
+            align-items: center;
+            .cta--sponge{
+                margin-right: 20px;
+            }
+            .current-state{
+                font-weight: 600;
+                opacity: 0.7;
+            }
+        }
+        .right-panel{
+            .social-links{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                a{
+                    color: $color-black;
+                    font-weight: 600;
+                    position: relative;
+                    transform: translateY(0);
+                    transition: all .3s ease;
+                    will-change: transform;
+                    &:hover{
+                        transform: translateY(-4px);
+                    }
+                    img{
+                        margin-left: 20px;
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
     }
     &.is-project-page{
+        position: static;
         margin-top: 120px;
         position: relative;
         flex-direction: column;
@@ -309,6 +326,72 @@ h1, h3, p, img{
         .next-project{
             font-size: 16px;
 
+        }
+    }
+}
+
+.more-projects{
+    margin-top: 42px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;;
+    padding: 42px 62px;
+    background: rgba(0,0,0,.04);
+    width: 100%;
+    .header{
+        h1{
+            font-size: 36px;
+        }
+        p{
+            font-weight: 600;
+        }
+    }
+    .more-project-list{
+        margin-top: 52px;
+        justify-content: space-between;
+        .more-project{
+            cursor: pointer;
+            position: relative;
+            .title{
+                font-family: $font-primary;
+                font-size: 28px;
+                position: relative;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    height: 34px;
+                    width: 34px;
+                    top: 50%;
+                    right: -54px;
+                    transform: translate(-50%, -50%);
+                    transition: all .3s ease;
+                    background: url('Images/icn_arrow.svg') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            .desc{
+                font-size: 16px;
+                color: $color-black;
+                opacity: 0.7;
+                transition: all .3s ease;
+            }
+            .link-wrap{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            @media screen and (min-width: 1201px){
+                margin-right: 24px;
+                &:hover{        
+                    .title:after{
+                        right: -58px;
+                    }
+                    .desc{
+                        opacity: 1;
+                        }
+                    }
+            }
         }
     }
 }
@@ -715,6 +798,7 @@ body.project--alvo{
         justify-content: center;
         margin-top: 32px;
         .left-panel{
+            position: static;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -761,29 +845,55 @@ body.project--alvo{
         text-align: center;
         margin-top: 32px;
         font-size: 14px;
-        .cta--sponge{
-            margin-bottom: 16px;
-            margin-right: 0;
-        }
-        .social-links{
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            a{
-                color: $color-black;
-                font-weight: 600;
-                position: relative;
-                transform: translateY(0);
-                transition: all .3s ease;
-                will-change: transform;
-                &:hover{
-                    transform: translateY(-4px);
+        .action-panels{
+            flex-direction: column;
+            .left-panel{
+                flex-direction: column;
+                .cta--sponge{
+                    margin-bottom: 16px;
+                    margin-right: 0;
                 }
-                img{
-                    margin-left: 20px;
-                    height: 20px;
-                    width: 20px;
+            }
+            .right-panel{
+                .social-links{
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    a{
+                        color: $color-black;
+                        font-weight: 600;
+                        position: relative;
+                        transform: translateY(0);
+                        transition: all .3s ease;
+                        will-change: transform;
+                        &:hover{
+                            transform: translateY(-4px);
+                        }
+                        img{
+                            margin-left: 20px;
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &.is-project-page{
+            margin-top: 42px;
+            padding-bottom: 60px;
+        }
+    }
+    .more-projects{
+        padding: 24px;
+        .more-project-list{
+            margin-top: 32px;
+            flex-wrap: wrap;
+            .more-project{
+                margin-right: 28px;
+                margin-bottom: 24px;
+                &:last-child{
+                    margin-bottom: 0;
                 }
             }
         }
