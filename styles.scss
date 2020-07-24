@@ -175,21 +175,14 @@ h1, h3, p, img{
         .list--project{
             .project-thumb{
                 position: relative;
-                height: 700px;
-                width: 550px;
+                height: 90vh;
                 overflow: hidden;
                 margin-bottom: 20px;
                 border-radius: 12px;
                 left: 0;
-
-                //background image
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-position: center;
-                transition: all .3s ease;
                 img{
                     height: 100%;
-                    width: 100%;
+                    width: auto;
                     max-width: 100%;
                     // transform: scale(1);
                     transition: all .5s ease;

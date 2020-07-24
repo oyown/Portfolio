@@ -203,22 +203,16 @@ h1, h3, p, img {
 
 .panels .right-panel .list--project .project-thumb {
   position: relative;
-  height: 700px;
-  width: 550px;
+  height: 90vh;
   overflow: hidden;
   margin-bottom: 20px;
   border-radius: 12px;
   left: 0;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
 }
 
 .panels .right-panel .list--project .project-thumb img {
   height: 100%;
-  width: 100%;
+  width: auto;
   max-width: 100%;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
