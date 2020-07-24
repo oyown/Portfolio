@@ -87,7 +87,8 @@ h1, h3, p, img {
   position: fixed;
   top: 0;
   padding: 42px 0;
-  z-index: 999;
+  z-index: 1;
+  background: #fff;
 }
 
 .navbar img {
@@ -95,6 +96,7 @@ h1, h3, p, img {
 }
 
 .navbar.other-page {
+  background: transparent;
   position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -208,14 +210,16 @@ h1, h3, p, img {
   margin-bottom: 20px;
   border-radius: 12px;
   left: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .panels .right-panel .list--project .project-thumb img {
   height: 100%;
   width: auto;
   max-width: 100%;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .panels .right-panel .list--project .project-thumb .thumb--link {
@@ -233,8 +237,7 @@ h1, h3, p, img {
     background-size: 101%;
   }
   .panels .right-panel .list--project .project-thumb:hover img {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
+    height: 92vh;
   }
 }
 
@@ -1007,7 +1010,7 @@ body.project--alvo .ayn-project-body .content-width h4 {
   }
   .panels .right-panel .list--project .project-thumb {
     width: calc(100vw - 32px);
-    height: 502px;
+    height: auto;
     background-size: cover;
     background-position: top;
   }

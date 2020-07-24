@@ -79,12 +79,13 @@ h1, h3, p, img{
     position: fixed;
     top: 0;
     padding: 42px 0;
-    z-index: 999;
+    z-index: 1;
+    background: #fff;
     img{
         height: auto;
     }
     &.other-page{
-        // background: #fff;
+        background: transparent;
         position: relative;
         justify-content: space-between;
         align-items: center;
@@ -180,13 +181,13 @@ h1, h3, p, img{
                 margin-bottom: 20px;
                 border-radius: 12px;
                 left: 0;
+                transition: all .3s ease;
                 img{
                     height: 100%;
                     width: auto;
                     max-width: 100%;
-                    // transform: scale(1);
-                    transition: all .5s ease;
-                    // will-change: transform;
+                    transition: all .3s ease;
+                    //will-change: transform;
                 }
                 .thumb--link{
                     position: absolute;
@@ -201,7 +202,7 @@ h1, h3, p, img{
                         left: 12px;
                         background-size: 101%;
                         img{
-                            transform: scale(1.01);
+                            height: 92vh;
                         }
                     }
                 }
@@ -830,7 +831,7 @@ body.project--alvo{
             .list--project{
                 .project-thumb{
                     width: calc(100vw - 32px);
-                    height: 502px;
+                    height: auto;
                     background-size: cover;
                     background-position: top;
                     img{
