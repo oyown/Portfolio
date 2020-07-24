@@ -230,14 +230,15 @@ h1, h3, p, img {
   z-index: 2;
 }
 
-.panels .right-panel .list--project .project-thumb:hover {
-  left: 12px;
-  background-size: 101%;
-}
-
-.panels .right-panel .list--project .project-thumb:hover img {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+@media screen and (min-width: 1201px) {
+  .panels .right-panel .list--project .project-thumb:hover {
+    left: 12px;
+    background-size: 101%;
+  }
+  .panels .right-panel .list--project .project-thumb:hover img {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
 }
 
 .panels .right-panel .social-links {

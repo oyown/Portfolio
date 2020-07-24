@@ -201,10 +201,12 @@ h1, h3, p, img{
                     z-index: 2;
                 }
                 &:hover{
-                    left: 12px;
-                    background-size: 101%;
-                    img{
-                        transform: scale(1.01);
+                    @media screen and (min-width: 1201px){
+                        left: 12px;
+                        background-size: 101%;
+                        img{
+                            transform: scale(1.01);
+                        }
                     }
                 }
             }
