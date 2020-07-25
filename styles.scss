@@ -121,7 +121,7 @@ h1, h3, p, img{
             width: 18px;
         }
     }
-    &:hover{
+    &:hover, &:active{
         .is-tooltip{
             opacity: 1 !important;
         }
@@ -792,7 +792,7 @@ body.project--alvo{
     .has-tooltip{
         .is-tooltip{
             text-align: left;
-            min-width: calc(100% + 20px);
+            min-width: 170px;
         }
     }
 
@@ -895,7 +895,7 @@ body.project--alvo{
             margin-top: 32px;
             flex-wrap: wrap;
             .more-project{
-                margin-right: 28px;
+                margin-right: 10%;
                 margin-bottom: 24px;
                 &:last-child{
                     margin-bottom: 0;

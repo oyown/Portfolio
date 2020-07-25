@@ -143,7 +143,7 @@ h1, h3, p, img {
   width: 18px;
 }
 
-.has-tooltip:hover .is-tooltip {
+.has-tooltip:hover .is-tooltip, .has-tooltip:active .is-tooltip {
   opacity: 1 !important;
 }
 
@@ -957,7 +957,7 @@ body.project--alvo .ayn-project-body .content-width h4 {
   }
   .has-tooltip .is-tooltip {
     text-align: left;
-    min-width: calc(100% + 20px);
+    min-width: 170px;
   }
   .panels {
     -webkit-box-orient: vertical;
@@ -1094,7 +1094,7 @@ body.project--alvo .ayn-project-body .content-width h4 {
         flex-wrap: wrap;
   }
   .more-projects .more-project-list .more-project {
-    margin-right: 28px;
+    margin-right: 10%;
     margin-bottom: 24px;
   }
   .more-projects .more-project-list .more-project:last-child {
