@@ -82,24 +82,46 @@ $('document').ready(function () {
     }, 1000);
   })
 
-  //project schow progress bar on scroll
-  if($(".project-tabs .tab").length>0){
-    var totalHeight = 0;
-      $('section[data-section]').each(function(){
-         totalHeight += $(this).height();
-      });
-    $(window).scroll(function(){
+  // //project schow progress bar on scroll
+  // if($(".project-tabs .tab").length>0){
+  //   var totalHeight = 0;
+  //     $('section[data-section]').each(function(){
+  //        totalHeight += $(this).height();
+  //     });
+  //   $(window).scroll(function(){
       
-      var el = $('section[data-section]')[0];
-      var scrollTop = $(window).scrollTop(),
-        elementOffset = $(el).offset().top,
-        distance = (scrollTop - elementOffset);
+  //     var el = $('section[data-section]')[0];
+  //     var scrollTop = $(window).scrollTop(),
+  //       elementOffset = $(el).offset().top,
+  //       distance = (scrollTop - elementOffset);
 
-        var scrollWidth = parseInt((distance*100)/totalHeight);
+  //       var scrollWidth = parseInt((distance*100)/totalHeight);
 
-        if(scrollWidth>=0 && scrollWidth<=100){
-          $(".project-tabs .progress-bar").css("width", scrollWidth+"%");
-        }
+  //       if(scrollWidth>=0 && scrollWidth<=100){
+  //         $(".project-tabs .progress-bar").css("width", scrollWidth+"%");
+  //       }
+  //   });
+  // }
+
+  //show active section on scroll
+  var scrollItems = $(".ayn-project-body section[data-section]");
+  if ($(".project-tabs .tab").length > 0) {
+    $(window).scroll(function () {
+      var fromTop = $(this).scrollTop(),
+        distance = (fromTop - scrollItems.offset().top);
+
+      if (distance>0) {
+        var cur = scrollItems.map(function () {
+          if ($(this).offset().top - 200 < fromTop)
+            return this;
+        });
+
+        var scrolledEl = $(cur[cur.length - 1]).attr("data-section");
+        var activeTab = $(".project-tabs .tab[data-section='" + scrolledEl + "']");
+
+        activeTab.parent().find(".active").removeClass("active");
+        activeTab.addClass("active");
+      }
     });
   }
 
