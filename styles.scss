@@ -489,9 +489,62 @@ h1, h3, p, img{
         width: 40%;
         background: rgba(0,0,0, .08)
     }
+    
+    .stretched-section{
+        padding: 42px 24px;
+        background: rgba(0,0,0,0.04);
+        border-radius: 4px;
+        .content-width{
+            margin-bottom: 0;
+            &>*:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .project-tabs{
+        margin-bottom: 120px;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background: #fff;
+        .tab{
+            width: 100%;
+            border: 2px solid rgba(0,0,0,.07);
+            margin-right: -1px;
+            font-size: 18px;
+            text-align: center;
+            padding: 12px;
+            transition: all .3s ease;
+            border-radius: 2px;
+            font-weight: 600;
+            opacity: 0.7;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:first-child{
+                border-left: 2px solid rgba(0,0,0,.07);
+            }
+            &:hover{
+                background: #ffeac8;
+                opacity: 1;
+            }
+        }
+        div.progress-bar{
+            position: absolute;
+            height: 4px;
+            width: 0;
+            bottom: 0;
+            left: 0;
+            background: #e4a030;
+            transition: all .3s ease;
+        }
+    }
+    
     .content-width{
         font-size: 18px;
-        margin-bottom: 62px;
+        margin-bottom: 120px;
         &>*:last-child{
             margin-bottom: 0;
             padding-bottom: 0;
@@ -507,7 +560,13 @@ h1, h3, p, img{
             font-style: italic;
         }
         p{
-            margin-bottom: 20px !important;
+            margin-bottom: 32px !important;
+        }
+
+        ul:not(.lSGallery){
+            li{
+                margin-bottom: 20px;
+            }
         }
 
 
@@ -520,8 +579,20 @@ h1, h3, p, img{
 
         h1, h3{
             font-size: 32px;
-            color: #e4a030;
-            margin-bottom: 12px !important;
+            color: $color-black;
+            padding-bottom: 8px;
+            position: relative;
+            margin-bottom: 42px !important;
+            &:after{
+                content:"";
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+                width: 42px;
+                height: 3px;
+                background: #e4a030;
+                border-radius: 12px;
+            }
         }
 
         h4{
@@ -540,14 +611,13 @@ h1, h3, p, img{
         blockquote{
             padding: 20px 32px !important;
             margin: 28px auto !important;
-            background: rgba(0,0,0,.06);
+            background: rgba(0,0,0,.04);
             position: relative;
-            text-align: center;
             &:after{
                 content: "";
                 position: absolute;
-                height: 4px;
-                width: 100%;
+                width: 4px;
+                height: 100%;
                 background: #e4a030;
                 left: 0;
                 top: 0;
@@ -555,8 +625,6 @@ h1, h3, p, img{
         }
         
         .project-desc{
-            background: #fdf7ed;
-            padding: 24px;
             border-radius: 12px;
             margin-bottom: 42px !important;
             h1.title{
@@ -721,11 +789,11 @@ body.project--webdev{
        padding: 20vh 0;
    } 
    .ayn-project-body .content-width{
-       .project-desc{
-           background: #c4c0fd47;
-       }
+
        h1, h3{
-           color: #776fef;
+           &:after{
+                background: #c4c0fd;
+           }
        }
        h4{
            border-color:#776fef ;
@@ -737,11 +805,11 @@ body.project--alvo{
         background: #FCE2E1;
     } 
     .ayn-project-body .content-width{
-        .project-desc{
-            background: #fce2e16b;
-        }
+
         h1, h3{
-            color: #ff6d67;
+            &:after{
+                 background: #ff6d67;
+            }
         }
         h4{
             border-color:#ff6d67 ;

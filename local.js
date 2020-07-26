@@ -63,7 +63,7 @@ $('document').ready(function () {
     $(".has-tooltip").append("<div class='is-tooltip'>"+tooltipValue+"</div>");
   }
 
-  //project scroll animation
+  //project header fade animation
   $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     $(".project-details").css("opacity", 1 - scrollTop / 500);
@@ -71,9 +71,41 @@ $('document').ready(function () {
     $(".project-details .fixed-content-wrapper").css("transform", "translateY(-" + scrollTop / 5 + "px)");
   });
 
+  //project scroll to section on tab click
+  $(".project-tabs .tab").click(function () {
+    // $(this).parent().find(".active").removeClass("active");
+    // $(this).addClass("active");
+    var sectionTab = $(this).attr("data-section");
+    var scrollEl = $(".ayn-project-body").find("section[data-section='" + sectionTab + "']")[0];
+    $('body').animate({
+      scrollTop: eval($(scrollEl).offset().top - 90)
+    }, 1000);
+  })
+
+  //project schow progress bar on scroll
+  if($(".project-tabs .tab").length>0){
+    var totalHeight = 0;
+      $('section[data-section]').each(function(){
+         totalHeight += $(this).height();
+      });
+    $(window).scroll(function(){
+      
+      var el = $('section[data-section]')[0];
+      var scrollTop = $(window).scrollTop(),
+        elementOffset = $(el).offset().top,
+        distance = (scrollTop - elementOffset);
+
+        var scrollWidth = parseInt((distance*100)/totalHeight);
+
+        if(scrollWidth>=0 && scrollWidth<=100){
+          $(".project-tabs .progress-bar").css("width", scrollWidth+"%");
+        }
+    });
+  }
+
   //scrolling fade in
   if ($(".ayn-project-body").length > 0) {
-  ScrollReveal().reveal('.ayn-project-body section>*', { delay: 200 });
+  ScrollReveal().reveal('.ayn-project-body section>*');
   }
 
   // REMOVE THIS
