@@ -3,10 +3,28 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+//local font
+// @font-face {
+//     font-family: 'Redwing-light';
+//     src:  url('./Fonts/Redwing/Redwing-Light.otf'),
+// }
+// @font-face {
+//     font-family: 'Redwing-medium';
+//     src:  url('./Fonts/Redwing/Redwing-Medium.otf'),
+// }
+// @font-face {
+//     font-family: 'Apex-el';
+//     src:  url('./Fonts/Apex/Apex\ Mk3-ExtraLight.otf'),
+// }
+@font-face {
+    font-family: 'Apex-med';
+    src:  url('./Fonts/Apex/Apex\ Mk3-Medium.otf'),
+}
+
 // variables
 $color-black: #292A2C;
-$font-primary: 'Red Rose', 'serif';
-$font-secondary: 'Mulish', 'sans-serif';
+$font-primary: 'Apex-med', 'serif';
+$font-secondary: 'IBM Plex Sans', 'sans-serif';
 
 
 body{

@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@font-face {
+  font-family: 'Apex-med';
+  src: url("./Fonts/Apex/Apex Mk3-Medium.otf");
+}
+
 body {
   background: #fff;
   margin: 0;
@@ -9,7 +14,7 @@ body {
 
 body * {
   color: #292A2C;
-  font-family: "Mulish", "sans-serif";
+  font-family: "IBM Plex Sans", "sans-serif";
   line-height: 1.5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -50,7 +55,7 @@ body.other-page {
 }
 
 h1, h3 {
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
 }
 
 h1, h3, p, img {
@@ -170,7 +175,7 @@ h1, h3, p, img {
 }
 
 .panels .left-panel .header-text .title--page {
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
   font-size: 62px;
   margin-bottom: 8px;
 }
@@ -389,7 +394,7 @@ h1, h3, p, img {
 
 .site-actions.is-project-page .action-title {
   font-size: 32px;
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
   margin-bottom: 32px;
 }
 
@@ -430,7 +435,7 @@ h1, h3, p, img {
 }
 
 .more-projects .more-project-list .more-project .title {
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
   font-size: 28px;
   position: relative;
 }
@@ -509,11 +514,11 @@ h1, h3, p, img {
 
 .project-details .project-overview .project-title {
   font-size: 62px;
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
 }
 
 .project-details .project-overview .project-title div {
-  font-family: "Mulish", "sans-serif";
+  font-family: "IBM Plex Sans", "sans-serif";
   font-size: 16px;
   opacity: 0.7;
   margin-top: 2px;
@@ -553,7 +558,7 @@ h1, h3, p, img {
 }
 
 .project-details .project-stats .stat .stat-title {
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
   font-size: 14px;
   opacity: 0.7;
   margin-bottom: 2px;
@@ -702,7 +707,7 @@ h1, h3, p, img {
 .ayn-project-body .content-width a {
   font-style: italic;
   text-decoration: none;
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
   border-bottom: 2px solid #e4a030;
 }
 
@@ -727,7 +732,7 @@ h1, h3, p, img {
 
 .ayn-project-body .content-width h4 {
   font-size: 20px;
-  font-family: "Mulish", "sans-serif";
+  font-family: "IBM Plex Sans", "sans-serif";
   font-weight: 700;
   margin-bottom: 12px !important;
   border-left: 4px solid #e4a030;
@@ -762,7 +767,7 @@ h1, h3, p, img {
 
 .ayn-project-body .content-width .project-desc h1.title {
   color: #fff;
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
   font-size: 32px;
   margin-bottom: 16px;
 }
@@ -822,7 +827,7 @@ h1, h3, p, img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 14px;
-  font-family: "Red Rose", "serif";
+  font-family: "Apex-med", "serif";
   width: 100%;
   text-align: center;
 }
@@ -1220,7 +1225,7 @@ body.project--alvo .ayn-project-body .content-width h4 {
             flex-direction: column;
   }
   .ayn-project-body .project-stats .stat .stat-title {
-    font-family: "Red Rose", "serif";
+    font-family: "Apex-med", "serif";
     font-size: 14px;
     opacity: 0.7;
     margin-bottom: 2px;
