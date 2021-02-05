@@ -6,6 +6,14 @@
   src: url("./Fonts/Apex/Apex Mk3-Medium.otf");
 }
 
+.font--primary {
+  font-family: "Apex-med", "serif";
+}
+
+.font--secondary {
+  font-family: "IBM Plex Sans", "sans-serif";
+}
+
 body {
   background: #fff;
   margin: 0;
@@ -15,6 +23,7 @@ body {
 body * {
   color: #292A2C;
   font-family: "IBM Plex Sans", "sans-serif";
+  letter-spacing: -0.6;
   line-height: 1.5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -47,6 +56,7 @@ body.other-page {
           align-items: center;
   background: #fff;
   z-index: 1999;
+  font-size: 32px;
 }
 
 .pre-loader video {
@@ -56,6 +66,8 @@ body.other-page {
 
 h1, h3 {
   font-family: "Apex-med", "serif";
+  letter-spacing: 0;
+  line-height: initial;
 }
 
 h1, h3, p, img {
@@ -80,7 +92,7 @@ h1, h3, p, img {
 .oyn-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 42px;
+  padding: 120px;
 }
 
 .oyn-container.no-padding {
@@ -162,6 +174,10 @@ h1, h3, p, img {
           align-items: flex-end;
 }
 
+.panels .full-panel {
+  width: 100%;
+}
+
 .panels .left-panel {
   position: -webkit-sticky;
   position: sticky;
@@ -170,31 +186,51 @@ h1, h3, p, img {
   margin-bottom: 32px;
 }
 
-.panels .left-panel .header-text img.emoji--hi {
+.panels .right-panel {
+  margin-top: 42px;
+  background: #fff;
+  z-index: 2;
+}
+
+.panels .header-text img.emoji--hi {
   height: 62px;
 }
 
-.panels .left-panel .header-text .title--page {
+.panels .header-text .title--page, .panels .header-text .title--page > .squiggle {
   font-family: "Apex-med", "serif";
-  font-size: 62px;
-  margin-bottom: 8px;
+  font-size: 82px;
+  margin-bottom: 52px;
+  position: relative;
+  letter-spacing: 0;
+  line-height: initial;
 }
 
-.panels .left-panel .header-text .subheader {
+.panels .header-text .squiggle > img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.panels .header-text .subheader {
   font-size: 24px;
   margin-bottom: 32px;
 }
 
-.panels .left-panel .header-text .subheader .has-tooltip {
+.panels .header-text .subheader .has-tooltip {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.panels .left-panel .header-text .list--industry * {
+.panels .header-text .list--industry * {
   margin-right: 12px;
 }
 
-.panels .left-panel .header-text .list--industry .industry-name {
+.panels .header-text .list--industry .industry-name {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
@@ -202,13 +238,7 @@ h1, h3, p, img {
   letter-spacing: .4px;
 }
 
-.panels .right-panel {
-  margin-top: 42px;
-  background: #fff;
-  z-index: 2;
-}
-
-.panels .right-panel .list--project .project-thumb {
+.panels .list--project .project-thumb {
   position: relative;
   height: 90vh;
   overflow: hidden;
@@ -219,7 +249,7 @@ h1, h3, p, img {
   transition: all .3s ease;
 }
 
-.panels .right-panel .list--project .project-thumb img {
+.panels .list--project .project-thumb img {
   height: 100%;
   width: auto;
   max-width: 100%;
@@ -227,7 +257,7 @@ h1, h3, p, img {
   transition: all .3s ease;
 }
 
-.panels .right-panel .list--project .project-thumb .thumb--link {
+.panels .list--project .project-thumb .thumb--link {
   position: absolute;
   top: 0;
   left: 0;
@@ -237,11 +267,11 @@ h1, h3, p, img {
 }
 
 @media screen and (min-width: 1201px) {
-  .panels .right-panel .list--project .project-thumb:hover {
+  .panels .list--project .project-thumb:hover {
     left: 12px;
     background-size: 101%;
   }
-  .panels .right-panel .list--project .project-thumb:hover img {
+  .panels .list--project .project-thumb:hover img {
     height: 92vh;
   }
 }

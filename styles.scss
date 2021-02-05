@@ -26,6 +26,16 @@ $color-black: #292A2C;
 $font-primary: 'Apex-med', 'serif';
 $font-secondary: 'IBM Plex Sans', 'sans-serif';
 
+//default classes
+.font--{
+    &primary{
+        font-family: $font-primary;
+    }
+    &secondary{
+        font-family: $font-secondary;
+    }
+}
+
 
 body{
     background:#fff;
@@ -34,6 +44,7 @@ body{
  *{
     color: $color-black;
     font-family: $font-secondary;
+    letter-spacing: -0.6;
     line-height: 1.5;
     box-sizing: border-box;
  }
@@ -59,6 +70,7 @@ body{
     align-items: center;
     background: #fff;
     z-index: 1999;
+    font-size: 32px;
     video{
         height: 20%;
         width: auto;
@@ -67,6 +79,8 @@ body{
 
 h1, h3{
     font-family: $font-primary;
+    letter-spacing: 0;
+    line-height: initial;
 }
 
 h1, h3, p, img{
@@ -86,7 +100,7 @@ h1, h3, p, img{
 .oyn-container{
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 42px;
+    padding: 120px;
     &.no-padding{
         padding: 0;
     }
@@ -151,82 +165,100 @@ h1, h3, p, img{
     width: 100%;
     justify-content: space-between;
     align-items: flex-end;
+
+    .full-panel{
+        width: 100%;
+    }
+
     .left-panel{
         position: sticky;
         bottom: 140px;
         max-width: 46%;
         margin-bottom: 32px;
-        .header-text{
-            img.emoji--hi{
-                height: 62px;
-            }
-            .title--page{
-                font-family: $font-primary;
-                font-size: 62px;
-                margin-bottom: 8px;
-            }
-            .subheader{
-                font-size: 24px;
-                margin-bottom: 32px;
-                .has-tooltip{
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-            }
-            .list--industry{
-                *{
-                    margin-right: 12px;
-                }
-                .industry-name{
-                    text-transform: uppercase;
-                    font-size: 18px;
-                    font-weight: 700;
-                    opacity: 0.6;
-                    letter-spacing: .4px;
-                }
-            }
-        }
     }
     .right-panel{
         margin-top: 42px;
         background: #fff;
-        z-index: 2;
-        .list--project{
-            .project-thumb{
-                position: relative;
-                height: 90vh;
-                overflow: hidden;
-                margin-bottom: 20px;
-                border-radius: 12px;
-                left: 0;
+        z-index: 2; 
+    }
+    .header-text{
+        img.emoji--hi{
+            height: 62px;
+        }
+        .title--page, .title--page>.squiggle{
+            font-family: $font-primary;
+            font-size: 82px;
+            margin-bottom: 52px;
+            position: relative;
+            letter-spacing: 0;
+            line-height: initial;
+        }
+        .squiggle>img{
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: auto;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
+        .subheader{
+            font-size: 24px;
+            margin-bottom: 32px;
+            .has-tooltip{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .list--industry{
+            *{
+                margin-right: 12px;
+            }
+            .industry-name{
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 700;
+                opacity: 0.6;
+                letter-spacing: .4px;
+            }
+        }
+    }
+    .list--project{
+        .project-thumb{
+            position: relative;
+            height: 90vh;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            left: 0;
+            transition: all .3s ease;
+            img{
+                height: 100%;
+                width: auto;
+                max-width: 100%;
                 transition: all .3s ease;
-                img{
-                    height: 100%;
-                    width: auto;
-                    max-width: 100%;
-                    transition: all .3s ease;
-                    //will-change: transform;
-                }
-                .thumb--link{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    z-index: 2;
-                }
-                &:hover{
-                    @media screen and (min-width: 1201px){
-                        left: 12px;
-                        background-size: 101%;
-                        img{
-                            height: 92vh;
-                        }
+                //will-change: transform;
+            }
+            .thumb--link{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+            }
+            &:hover{
+                @media screen and (min-width: 1201px){
+                    left: 12px;
+                    background-size: 101%;
+                    img{
+                        height: 92vh;
                     }
                 }
             }
         }
     }
+    
 }
 
 .cta--sponge{
