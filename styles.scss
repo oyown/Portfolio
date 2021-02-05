@@ -970,7 +970,7 @@ body.project--alvo{
     }
     .oyn-container{
         max-width: 1024px;
-        padding: 0 16px ;
+        padding: 0 32px !important;
     }
     .navbar{
         left: 0;
@@ -997,42 +997,15 @@ body.project--alvo{
         align-items: center;
         justify-content: center;
         margin-top: 32px;
-        .left-panel{
-            position: static;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 100%;
-            .header-text{
-                text-align: center;
-                .subheader{
-                    font-size: 18px;
-                    line-height: 1.7;
-                    color: rgba(41, 42, 44, .7);
-                }
-                .list--industry{
-                    flex-wrap: wrap;
-                    justify-content: center;
-
-                }
+        .header-text{
+            .title--page{
+                margin-bottom: 32px;
             }
-            .cta--sponge.mobile-only{
-                margin-top: 42px;
-                margin-right: 0;
-            }
-        }
-        .right-panel{
-            .list--project{
-                .project-thumb{
-                    width: calc(100vw - 32px);
-                    height: auto;
-                    background-size: cover;
-                    background-position: top;
-                    img{
-                        width: 100%;
-                        height: auto;
-                    }
+            .subheader{
+                max-width: 100%;
+                p.sub-point{
+                    font-size: 21px;
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -1040,50 +1013,63 @@ body.project--alvo{
     .site-actions{
         position: static;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         text-align: center;
         margin-top: 32px;
         font-size: 14px;
-        .action-panels{
-            flex-direction: column;
-            .left-panel{
-                flex-direction: column;
-                .cta--sponge{
-                    margin-bottom: 16px;
-                    margin-right: 0;
-                }
-            }
-            .right-panel{
-                .social-links{
-                    margin: 20px 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    a{
-                        color: $color-black;
-                        font-weight: 600;
-                        position: relative;
-                        transform: translateY(0);
-                        transition: all .3s ease;
-                        will-change: transform;
-                        &:hover{
-                            transform: translateY(-4px);
-                        }
-                        img{
-                            margin-left: 20px;
-                            height: 20px;
-                            width: 20px;
-                        }
-                    }
-                }
-            }
+        .social-links{
+            margin-top: 52px;
         }
         &.is-project-page{
             margin-top: 42px;
             padding-bottom: 60px;
         }
     }
+
+    .projects {
+        padding: 32px 0;
+        .header{
+            margin-bottom: 32px;
+            h1{
+                font-size: 32px;
+            }
+        }
+        .project-grid{
+            display: flex;
+            flex-direction: column;
+            .project{
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .faq{
+        padding: 32px 0;
+        .header{
+            margin-bottom: 32px;
+            h1{
+                font-size: 32px;
+            }
+        }
+    }
+
+    .footer{
+        margin: 32px 0;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .cta--primary{
+            margin-bottom: 42px;
+        }
+        .other-projects{
+            .project-links{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
     .more-projects{
         padding: 24px;
         .more-project-list{
@@ -1197,17 +1183,9 @@ body.project--alvo{
 
 //mobile styles
 @media screen and (max-width: 768px){
-    .panels{
-        .header-text{
-            .subheader{
-                max-width: 100%;
-                p.sub-point{
-                    font-size: 21px;
-                }
-            }
-        }
+    .cta--primary{
+        width: 100%;
     }
-    
     .project-details{
         padding: 18vh 0;
         .fixed-content-wrapper{

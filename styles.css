@@ -1135,7 +1135,7 @@ body.project--alvo .ayn-project-body .content-width h4 {
   }
   .oyn-container {
     max-width: 1024px;
-    padding: 0 16px;
+    padding: 0 32px !important;
   }
   .navbar {
     left: 0;
@@ -1171,51 +1171,15 @@ body.project--alvo .ayn-project-body .content-width h4 {
             justify-content: center;
     margin-top: 32px;
   }
-  .panels .left-panel {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .panels .header-text .title--page {
+    margin-bottom: 32px;
+  }
+  .panels .header-text .subheader {
     max-width: 100%;
   }
-  .panels .left-panel .header-text {
-    text-align: center;
-  }
-  .panels .left-panel .header-text .subheader {
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(41, 42, 44, 0.7);
-  }
-  .panels .left-panel .header-text .list--industry {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .panels .left-panel .cta--sponge.mobile-only {
-    margin-top: 42px;
-    margin-right: 0;
-  }
-  .panels .right-panel .list--project .project-thumb {
-    width: calc(100vw - 32px);
-    height: auto;
-    background-size: cover;
-    background-position: top;
-  }
-  .panels .right-panel .list--project .project-thumb img {
-    width: 100%;
-    height: auto;
+  .panels .header-text .subheader p.sub-point {
+    font-size: 21px;
+    margin-bottom: 20px;
   }
   .site-actions {
     position: static;
@@ -1223,66 +1187,77 @@ body.project--alvo .ayn-project-body .content-width h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     text-align: center;
     margin-top: 32px;
     font-size: 14px;
   }
-  .site-actions .action-panels {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .site-actions .action-panels .left-panel {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .site-actions .action-panels .left-panel .cta--sponge {
-    margin-bottom: 16px;
-    margin-right: 0;
-  }
-  .site-actions .action-panels .right-panel .social-links {
-    margin: 20px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .site-actions .action-panels .right-panel .social-links a {
-    color: #212121;
-    font-weight: 600;
-    position: relative;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    will-change: transform;
-  }
-  .site-actions .action-panels .right-panel .social-links a:hover {
-    -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-  }
-  .site-actions .action-panels .right-panel .social-links a img {
-    margin-left: 20px;
-    height: 20px;
-    width: 20px;
+  .site-actions .social-links {
+    margin-top: 52px;
   }
   .site-actions.is-project-page {
     margin-top: 42px;
     padding-bottom: 60px;
+  }
+  .projects {
+    padding: 32px 0;
+  }
+  .projects .header {
+    margin-bottom: 32px;
+  }
+  .projects .header h1 {
+    font-size: 32px;
+  }
+  .projects .project-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .project-grid .project {
+    margin-bottom: 16px;
+  }
+  .faq {
+    padding: 32px 0;
+  }
+  .faq .header {
+    margin-bottom: 32px;
+  }
+  .faq .header h1 {
+    font-size: 32px;
+  }
+  .footer {
+    margin: 32px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer .cta--primary {
+    margin-bottom: 42px;
+  }
+  .footer .other-projects .project-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .more-projects {
     padding: 24px;
@@ -1402,11 +1377,8 @@ body.project--alvo .ayn-project-body .content-width h4 {
 }
 
 @media screen and (max-width: 768px) {
-  .panels .header-text .subheader {
-    max-width: 100%;
-  }
-  .panels .header-text .subheader p.sub-point {
-    font-size: 21px;
+  .cta--primary {
+    width: 100%;
   }
   .project-details {
     padding: 18vh 0;

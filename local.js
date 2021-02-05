@@ -82,6 +82,16 @@ $('document').ready(function () {
     }, 1000);
   })
 
+  //project scroll to section on tab click
+  $(".faq-link").click(function () {
+    // $(this).parent().find(".active").removeClass("active");
+    // $(this).addClass("active");
+    $('body').animate({
+      scrollTop: eval($(".faq").offset().top - 90)
+    }, 1000);
+  })
+
+
   // //project schow progress bar on scroll
   // if($(".project-tabs .tab").length>0){
   //   var totalHeight = 0;
