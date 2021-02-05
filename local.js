@@ -130,7 +130,14 @@ $('document').ready(function () {
   ScrollReveal().reveal('.ayn-project-body section>*');
   }
 
-  // REMOVE THIS
-  // $(".ayn-project-body p").attr("contenteditable", "true");
+  // accordion
+  var allPanels = $('.accordion .answer').hide();
+    
+  $('.accordion > .question').click(function(e) {
+    console.log ("clicked", allPanels);
+    allPanels.slideUp(300);
+    $(this).find(".answer").show(300);
+    return false;
+  });
 
 });

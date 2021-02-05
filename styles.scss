@@ -44,7 +44,7 @@ body{
  *{
     color: $color-black;
     font-family: $font-secondary;
-    letter-spacing: -0.8;
+    letter-spacing: -0.6;
     box-sizing: border-box;
  }
  &.other-page{
@@ -184,6 +184,9 @@ h1, h3, p, img{
         img.emoji--hi{
             height: 62px;
         }
+        .title--page{
+            max-width: 100%;
+        }
         .title--page, .title--page>.squiggle{
             font-family: $font-primary;
             font-size: 82px;
@@ -191,6 +194,9 @@ h1, h3, p, img{
             position: relative;
             letter-spacing: 0;
             line-height: initial;
+            &.mobile-only{
+                font-size: 52px;
+            }
         }
         .squiggle>img{
             position: absolute;
@@ -373,7 +379,7 @@ h1, h3, p, img{
         p{
             font-family: $font-secondary;
             color: #fff;
-            opacity: 0.5;
+            opacity: 0.7;
             font-size: 21px;
         }
     }
@@ -387,6 +393,15 @@ h1, h3, p, img{
             height: 430px;
             background: #fff;
             width: 100%;
+            position: relative;
+            a{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+            }
             &.project--1{
                 grid-column-start: 1;
                 grid-column-end: 1;
@@ -410,6 +425,81 @@ h1, h3, p, img{
                 grid-column-end: 2;
                 background: yellow;
                 grid-row: 2;
+            }
+        }
+    }
+}
+
+//accordion
+.faq{
+     .header{
+        margin-bottom: 72px;
+        h1{
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+        p{
+            font-family: $font-secondary;
+            opacity: 0.7;
+            font-size: 21px;
+        }
+    }
+    .faq-list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 56px;
+        .question{
+            border-top: 1px solid $color-black;
+            padding: 20px;
+            cursor: pointer;
+            background: #fff;
+            transition: all 0.5s ease;
+            &:last-child{
+                border-bottom: 1px solid $color-black;
+            }
+            .question-header{
+                font-family: $font-primary;
+                font-size: 32px;
+                letter-spacing: 1.4px;
+                transition: color 0.3s ease;
+            }
+            .answer{
+                font-size: 21px;
+                margin-top: 32px;
+                transition: color 0.3s ease;
+            }
+            &:hover{
+                background: rgba(0,0,0,.035);
+                // &>*{
+                //     color: #fff;
+                // }
+            }
+            
+        }
+    }
+}
+
+.footer{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    .other-projects{
+        .header{
+            font-size: 16px;
+            letter-spacing: 1.4;
+            margin-bottom: 20px;
+        }
+        .project-links{
+            a{
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 0;
+                margin-right: 32px;
+                &:last{
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -1107,6 +1197,17 @@ body.project--alvo{
 
 //mobile styles
 @media screen and (max-width: 768px){
+    .panels{
+        .header-text{
+            .subheader{
+                max-width: 100%;
+                p.sub-point{
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+    
     .project-details{
         padding: 18vh 0;
         .fixed-content-wrapper{

@@ -23,7 +23,7 @@ body {
 body * {
   color: #212121;
   font-family: "IBM Plex Sans", "sans-serif";
-  letter-spacing: -0.8;
+  letter-spacing: -0.6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -195,6 +195,10 @@ h1, h3, p, img {
   height: 62px;
 }
 
+.panels .header-text .title--page {
+  max-width: 100%;
+}
+
 .panels .header-text .title--page, .panels .header-text .title--page > .squiggle {
   font-family: "Apex-med", "serif";
   font-size: 82px;
@@ -202,6 +206,10 @@ h1, h3, p, img {
   position: relative;
   letter-spacing: 0;
   line-height: initial;
+}
+
+.panels .header-text .title--page.mobile-only, .panels .header-text .title--page > .squiggle.mobile-only {
+  font-size: 52px;
 }
 
 .panels .header-text .squiggle > img {
@@ -425,7 +433,7 @@ h1, h3, p, img {
 .projects .header p {
   font-family: "IBM Plex Sans", "sans-serif";
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 21px;
 }
 
@@ -444,6 +452,16 @@ h1, h3, p, img {
   height: 430px;
   background: #fff;
   width: 100%;
+  position: relative;
+}
+
+.projects .project-grid .project a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
 }
 
 .projects .project-grid .project.project--1 {
@@ -480,6 +498,98 @@ h1, h3, p, img {
   background: yellow;
   -ms-grid-row: 2;
   grid-row: 2;
+}
+
+.faq .header {
+  margin-bottom: 72px;
+}
+
+.faq .header h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.faq .header p {
+  font-family: "IBM Plex Sans", "sans-serif";
+  opacity: 0.7;
+  font-size: 21px;
+}
+
+.faq .faq-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 56px;
+}
+
+.faq .faq-list .question {
+  border-top: 1px solid #212121;
+  padding: 20px;
+  cursor: pointer;
+  background: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.faq .faq-list .question:last-child {
+  border-bottom: 1px solid #212121;
+}
+
+.faq .faq-list .question .question-header {
+  font-family: "Apex-med", "serif";
+  font-size: 32px;
+  letter-spacing: 1.4px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.faq .faq-list .question .answer {
+  font-size: 21px;
+  margin-top: 32px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.faq .faq-list .question:hover {
+  background: rgba(0, 0, 0, 0.035);
+}
+
+.footer {
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer .other-projects .header {
+  font-size: 16px;
+  letter-spacing: 1.4;
+  margin-bottom: 20px;
+}
+
+.footer .other-projects .project-links a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 0;
+  margin-right: 32px;
+}
+
+.footer .other-projects .project-links a:last {
+  margin-right: 0;
 }
 
 .project-details {
@@ -1292,6 +1402,12 @@ body.project--alvo .ayn-project-body .content-width h4 {
 }
 
 @media screen and (max-width: 768px) {
+  .panels .header-text .subheader {
+    max-width: 100%;
+  }
+  .panels .header-text .subheader p.sub-point {
+    font-size: 21px;
+  }
   .project-details {
     padding: 18vh 0;
   }
