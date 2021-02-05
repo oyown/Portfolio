@@ -217,13 +217,13 @@ h1, h3, p, img {
 }
 
 .panels .header-text .subheader {
-  font-size: 24px;
-  margin-bottom: 32px;
+  max-width: 55%;
 }
 
-.panels .header-text .subheader .has-tooltip {
-  text-decoration: underline;
-  cursor: pointer;
+.panels .header-text .subheader p.sub-point {
+  font-family: "IBM Plex Sans", "sans-serif";
+  font-size: 32px;
+  margin-bottom: 32px;
 }
 
 .panels .header-text .list--industry * {
